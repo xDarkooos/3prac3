@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  
+  <title>Practice 3</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #FEE1A5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 0;
+    width: 358px;
+    height: 570px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 3px solid #000;
+    overflow: hidden;
+  }
+  .card__title {
+    padding: 0 0 20px 0;
+}
+.card__title h3 {
+    background: #d97706;
+    color: #000;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 24px 16px 24px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .card__title img {
+    align-items: center;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+.card__title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 24px 16px 24px;
+    line-height: 1.2;
+  }
+.card__title p {
+    color: #64748b;
+    font-size: 13px;
+    margin: 0 24px 12px 24px;
+    font-weight: 400;
+}
+.card__author {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px 24px 24px;
+   
+}
+.card__author img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    background: #3b82f6;
+}
+.card__author p {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 500;
+}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card__title">
+      <img src="assets/images/Blog Image.png" alt="....">
+        <h3>HTML & CSS </h3>
+        <p>Публікація 1 Вересня 2025</p>
+        <h2>Практична №3</h2>
+        <p>Мета практичної роботи полягає в тому, щоб налаштувати середовище розробки VS Code,
+          а також реалізувати картку блогу для вдосконалення фундаментальних навичок з HTML та CSS.</p>
+    </div>
+    <div class="card__author">
+        <img src="assets/images/avatar-femail.png" alt="author">
+        <p>Каріна Васильченко</p>
+    </div>
+  </div>
+</body>
+</html>
