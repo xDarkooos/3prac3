@@ -24,9 +24,8 @@
       padding: 20px;
     }
 
-    /* Картка */
     .card{
-      position: relative; /* щоб внутрішній бейдж можна було абсолют-позиціонувати відносно картки */
+      position: relative;
       width: 358px;
       height: 570px;
       background: var(--card-bg);
@@ -39,7 +38,6 @@
       justify-content: space-between;
     }
 
-    /* Зображення зверху */
     .card__image img{
       display: block;
       width: 100%;
@@ -53,13 +51,13 @@
       flex-direction: column;
       gap: 10px;
       color: #0f172a;
+      position: relative; /* щоб бейдж позиціонувався в межах контенту */
     }
 
-    /* Бейдж/хедер всередині картки (interactive) */
     .card-badge {
       position: absolute;
-      top: 172px;      /* трохи під зображенням — підганяй під свій макет */
-      left: 20px;
+      top: -14px; /* розташування над заголовком */
+      left: 0;
       z-index: 12;
       display: inline-flex;
       align-items: center;
@@ -73,12 +71,11 @@
       letter-spacing: 0.4px;
       border: 1px solid rgba(0,0,0,0.06);
       box-shadow: 0 3px 0 rgba(0,0,0,0.12);
-      cursor: pointer;                      /* курсор реагує як на кнопці */
+      cursor: pointer;
       transition: transform .14s ease, box-shadow .14s ease;
       user-select: none;
     }
 
-    /* hover / focus ефекти */
     .card-badge:hover,
     .card-badge:focus {
       transform: translateY(-6px);
@@ -90,18 +87,16 @@
       transform: translateY(-2px) scale(.995);
     }
 
-    /* Для доступності: коли фокус через клавіатуру */
     .card-badge:focus-visible{
       outline: 3px solid rgba(0,0,0,0.06);
       outline-offset: 4px;
     }
 
-    /* Заголовок картки */
     .card__title h2{
       font-size: 28px;
       font-weight: 700;
       color: #0f172a;
-      margin-top: 6px;
+      margin-top: 20px; /* щоб відступити після бейджа */
       line-height:1.15;
     }
 
@@ -133,30 +128,26 @@
 
     .card__author p{ font-weight:600; color:#111827; font-size:14px; }
 
-    /* Невелика адаптивність */
     @media (max-width: 380px){
       .card{ width: 320px; height: auto; }
       .card__image img{ height: 160px; }
-      .card-badge{ top: 142px; left: 16px; }
     }
   </style>
 </head>
 <body>
   <div class="card" role="article" aria-label="Картка практичної роботи">
-    <!-- зображення зверху -->
     <div class="card__image">
       <img src="assets/images/Blog Image.png" alt="Обкладинка практичної роботи">
     </div>
 
-    <!-- Інтерактивний бейдж/хедер (всередині картки) -->
-    <!-- Я вмістив його як кнопкоподібний елемент для кращої взаємодії -->
-    <button class="card-badge" aria-pressed="false" type="button">
-      HTML &amp; CSS
-    </button>
-
-    <!-- Контент картки -->
     <div class="card__content">
       <div class="card__meta">Публікація 1 Вересня 2025</div>
+
+      <!-- Хедер перенесено сюди -->
+      <button class="card-badge" aria-pressed="false" type="button">
+        Практична робота 3
+      </button>
+
       <div class="card__title">
         <h2>Практична №3</h2>
       </div>
@@ -169,7 +160,6 @@
       </div>
     </div>
 
-    <!-- Автор -->
     <div class="card__author">
       <img src="assets/images/avatar_male.png" alt="Аватар автора">
       <p>Огій Артем</p>
