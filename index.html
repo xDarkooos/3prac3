@@ -51,13 +51,12 @@
       flex-direction: column;
       gap: 10px;
       color: #0f172a;
-      position: relative; /* щоб бейдж позиціонувався в межах контенту */
     }
 
     .card-badge {
       position: absolute;
-      top: -14px; /* розташування над заголовком */
-      left: 0;
+      top: 172px;
+      left: 20px;
       z-index: 12;
       display: inline-flex;
       align-items: center;
@@ -96,8 +95,16 @@
       font-size: 28px;
       font-weight: 700;
       color: #0f172a;
-      margin-top: 20px; /* щоб відступити після бейджа */
+      margin-top: 6px;
       line-height:1.15;
+    }
+
+    header.card__header h2 {
+      color: #0f172a;
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 6px;
+      line-height: 1.15;
     }
 
     .card__meta {
@@ -131,6 +138,7 @@
     @media (max-width: 380px){
       .card{ width: 320px; height: auto; }
       .card__image img{ height: 160px; }
+      .card-badge{ top: 142px; left: 16px; }
     }
   </style>
 </head>
@@ -140,17 +148,16 @@
       <img src="assets/images/Blog Image.png" alt="Обкладинка практичної роботи">
     </div>
 
+    <button class="card-badge" aria-pressed="false" type="button">
+      HTML &amp; CSS
+    </button>
+
     <div class="card__content">
       <div class="card__meta">Публікація 1 Вересня 2025</div>
 
-      <!-- Хедер перенесено сюди -->
-      <button class="card-badge" aria-pressed="false" type="button">
-        Практична робота 3
-      </button>
-
-      <div class="card__title">
-        <h2>Практична №3</h2>
-      </div>
+      <header class="card__header">
+        <h2>Практична робота 3</h2>
+      </header>
 
       <div class="card__text">
         <p>
